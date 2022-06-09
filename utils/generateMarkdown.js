@@ -83,9 +83,12 @@ function generateMarkdown(data) {
         }
     }
     // Inserts table of contents into middle
-    let portions = markDown.split("|");
-    markDown = `${portions[0]}${tableOfContents}\n\n${portions[1]}`;
-
+	if(tableOfContents !== "## Table of Contents\n") {
+		let portions = markDown.split("|");
+		markDown = `${portions[0]}${tableOfContents}\n\n${portions[1]}`;
+	}else {
+		return markDown;
+	}
   	return markDown;
 }
 
