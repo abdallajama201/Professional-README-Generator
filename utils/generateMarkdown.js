@@ -21,9 +21,17 @@ function renderLicenseBadge(license) {
 // function will not be called if no license chosen
 function renderLicenseLink(license) {
 	let licenseOption = ["Apache","BSD","Creative Commons","GNU","MIT","Zlib",];
+	let links = [
+		"(https://opensource.org/licenses/Apache-2.0)",
+		"(https://opensource.org/licenses/BSD-3-Clause)",
+		"(http://creativecommons.org/publicdomain/zero/1.0/)",
+		"(https://www.gnu.org/licenses/gpl-3.0)",
+		"(https://opensource.org/licenses/MIT)",
+		"(https://opensource.org/licenses/Zlib)", 
+	]
 	for(let i = 0; i < licenseOption.length; i++) {
 		if(license === licenseOption[i]) {
-		return `[${licenseOption[i]}](./LICENSE.md)`;
+		return `[${licenseOption[i]}]${links[i]}`;
 		}
 	}
 } 
