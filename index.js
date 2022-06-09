@@ -70,8 +70,8 @@ function askQuestions() {
 
 // writes README file
 function writeToFile(data) {
-    //CHANGE LATER
-    fs.writeFile("README1.md",generateMarkdown(data), (err) =>
+    let path = process.argv[2] !== undefined ? `${process.argv[2]}/` : "";
+    fs.writeFile(`${path}README.md`,generateMarkdown(data), (err) =>
     err ? console.error(err) : "");
 }
 
