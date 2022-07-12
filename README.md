@@ -1,4 +1,4 @@
-# Node.js Challenge: Professional README Generator
+# Professional README Generator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
